@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; 
+}
+
+body {
+    font-family: "Limelight", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: black;
+    color: white;
+}
+
+header.navMenu {
+    background-color: #000000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    position: relative; 
+}
+
+header.hero-banner {
+    color: rgb(255, 255, 255);
+    background: url(herobanner.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+div.hero-content {    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+div.herocontent * {
+    margin: 10px 0;
+}
+
+section {
+    padding: 1rem;
+    height: 75vh; 
+}
+
+button#toggle:focus {
+    color: rgb(190, 29, 174);
+    border: 1px solid rgb(227, 187, 12);
+}
+
+nav {
+    display: flex;
+}
+
+nav li {
+    list-style-type: none;
+    margin: 1.5rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+button#toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+button#exploreBtn {
+    background-color: #E9A319;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+button#exploreBtn:hover {
+    background-color: #776238;
+    transition: 0.5s ease;
+}
+
+main.mainContent {
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+@media screen and (max-width: 1000px) {
+    button#toggle {
+        display: block;
+    }
+    nav {
+        display: none; 
+        position: absolute;
+        top: 100%;
+        left: 65%;
+        z-index: 100;
+        background-color: #000000;
+
+    }
+    nav ul { 
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav.active {
+        display: block;
+    }
+}
