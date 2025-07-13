@@ -1,4 +1,4 @@
-* {
+* { 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -51,8 +51,7 @@ section {
 }
 
 button#toggle:focus {
-    color: rgb(190, 29, 174);
-    border: 1px solid rgb(227, 187, 12);
+    color: #E9A319;
 }
 
 nav {
@@ -118,18 +117,24 @@ p {
     button#toggle {
         display: block;
     }
+    header.navMenu {
+        padding: 14px;
+    }
     nav {
         display: none; 
         position: absolute;
         top: 100%;
-        left: 65%;
+        right: 0;
+        left: auto;
         z-index: 100;
         background-color: #000000;
-
+        transition: all 0.6s ease;
     }
     nav ul { 
         flex-direction: column;
         gap: 10px;
+        align-items: flex-end;
+        
     }
 
     nav.active {
