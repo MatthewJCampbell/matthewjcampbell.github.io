@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Explorers Club</title>
     <link rel="stylesheet" href="styles.css">
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
 </head>
 <body>
     <header class="navMenu">
@@ -45,7 +49,11 @@
                 <br>
                 <br>
                 Join us as we embark on thrilling expeditions, conduct groundbreaking research, and share our findings with the world. Whether you are an experienced explorer or just starting your journey, The Explorers Club welcomes you to be part of our community.
+                <br>
+                <br>
+                Explore the unknown, discover new horizons, and make a difference in the world with The Explorers Club. Together, we can inspire a new generation of explorers and adventurers to take on the challenges of our time and to push the boundaries of what is possible.
                 </p>
+                
         </section>
 
         <section id="expeditions">
@@ -54,7 +62,9 @@
 
         <section id="media">
             <h2>Media</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/61Xz2Ew71fc?si=Auh6D6kC8j7iUumO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div display="flex" class="video-container">
+                <iframe width="800" height="500" src="https://www.youtube.com/embed/61Xz2Ew71fc?si=Auh6D6kC8j7iUumO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div> 
         </section>
 
         <section id="contact">
@@ -64,12 +74,19 @@
         </section>
     </main>
 <footer>
-    <p>&copy; 2025 The Explorers Club. All rights reserved.</p>
-    <p>Follow us on social media: 
-        <a href="https://www.facebook.com" target="_blank">Facebook</a> | 
-        <a href="https://www.instagram.com" target="_blank">Instagram</a> | 
-        <a href="https://www.youtube.com" target="_blank">YouTube</a>
-    </p>
+  <p>&copy; 2025 The Explorers Club. All rights reserved.</p>
+  <p>Follow us on social media:</p>
+  <div class="social-icons">
+    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+      <i class="fab fa-facebook"></i>
+    </a>
+    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+      <i class="fab fa-youtube"></i>
+    </a>
+  </div>
 </footer>
 
     <script src="main.js"></script>
