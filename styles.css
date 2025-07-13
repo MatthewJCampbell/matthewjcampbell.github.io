@@ -8,12 +8,12 @@ html {
     scroll-behavior: smooth; 
 }
 
-.dancing-script {
-  font-family: "Dancing Script", cursive;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
+.lobster-regular {
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
   font-style: normal;
 }
+
 
 body {
     font-family: "Limelight", sans-serif;
@@ -56,10 +56,10 @@ div.herocontent * {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 h1 {
+    font-family: "Lobster", sans-serif;
     font-size: 2rem;
     text-align: center;
     color: #ffffff;
-    font-family: ;
 }
 
 button#toggle:focus {
@@ -123,6 +123,7 @@ main.mainContent {
     padding: 20px;
 }
 h2 {
+    font-family: "Lobster", sans-serif;
     font-size: 2rem;
     margin-bottom: 20px;
     color: #E9A319;
