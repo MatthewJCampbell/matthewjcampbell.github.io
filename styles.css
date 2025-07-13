@@ -28,7 +28,7 @@ header.navMenu {
 
 header.hero-banner {
     color: rgb(255, 255, 255);
-    background: url(herobanner.jpg);
+    background: url(heroBanner2.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -83,6 +83,10 @@ button#toggle {
     font-size: 2rem;
     cursor: pointer;
 }
+button#toggle:hover {
+    color: #E9A319;
+    transition: 0.5s ease;
+}
 
 button#exploreBtn {
     background-color: #E9A319;
@@ -117,27 +121,38 @@ p {
     button#toggle {
         display: block;
     }
+
     header.navMenu {
         padding: 14px;
     }
+
     nav {
-        display: none; 
+        display: block;
         position: absolute;
         top: 100%;
         right: 0;
         left: auto;
-        z-index: 100;
         background-color: #000000;
-        transition: all 0.6s ease;
+        z-index: 100;
+        opacity: 0;
+        transform: translateY(-10px);
+        max-height: 0;
+        overflow: hidden;
+        transition: opacity 0.4s ease, transform 0.4s ease, max-height 0.4s ease;
     }
+
     nav ul { 
         flex-direction: column;
         gap: 10px;
         align-items: flex-end;
-        
+        padding: 10px 20px;
     }
 
     nav.active {
-        display: block;
+        opacity: 1;
+        transform: translateY(0);
+        max-height: 500px; 
+        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+        border-top: 1px solid #444;
     }
 }

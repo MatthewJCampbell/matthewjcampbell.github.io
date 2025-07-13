@@ -1,32 +1,32 @@
-var navContainer = document.getElementById("menu");
-var btn = document.getElementById("toggle");
+const navContainer = document.getElementById("menu");
+const toggleBtn = document.getElementById("toggle");
+const navLinks = document.getElementsByClassName("navLink");
 
-function toggleMenu() {
+toggleBtn.addEventListener("click", function () {
     navContainer.classList.toggle("active");
-}
-btn.addEventListener("click", toggleMenu);
+});
 
-var navLinks = document.getElementsByClassName("navLink");
-
-console.log(navLinks);
-var i = 0; 
-
-for(i = 0; i < navLinks.length; i++) {
-
-    console.log("value of i:" + i);
-
-    navLinks[i].addEventListener('click', toggleMenu);
-
+for (let i = 0; i < navLinks.length; i++) {
+    navLinks[i].addEventListener("click", function () {
+        navContainer.classList.remove("active");
+    });
 }
 
-const mainSections = document.getElementsByClassName('mainContent')
+navContainer.addEventListener("mouseleave", function () {
+    navContainer.classList.remove("active");
+});
 
+document.addEventListener("click", function (event) {
+    const isClickInsideNav = navContainer.contains(event.target);
+    const isClickOnToggle = toggleBtn.contains(event.target);
+    
+    if (!isClickInsideNav && !isClickOnToggle) {
+        navContainer.classList.remove("active");
+    }
+});
 
-const mainSection = mainSections [0];
-
-function scrollToMain() {
-    mainSection.scrollIntoView({behavior: 'smooth'});
-}
-const exploreMoreBtn = document.getElementById('exploreMoreBtn');
-
-exploreBtn.addEventListener('click', scrollToMain);
+const exploreBtn = document.getElementById("exploreBtn");
+const aboutSection = document.getElementById("expeditions");
+exploreBtn.addEventListener("click", function () {
+    aboutSection.scrollIntoView({ behavior: "smooth" });
+});
