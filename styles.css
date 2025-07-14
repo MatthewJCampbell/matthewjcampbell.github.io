@@ -216,15 +216,16 @@ section#ourStory {
     margin: 20px 50px;
 }
 section#expeditions {
+    background-image: url(patagonia.jpg);
     background-color: #ffffff;
     color: #000000;
     text-align: center;
+
 }
 section#media {
     background-color: #000000;
     color: #ffffff;
     text-align: center;
-
 }
 iframe {
   max-width: 100%;
