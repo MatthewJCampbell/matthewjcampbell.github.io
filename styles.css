@@ -188,13 +188,12 @@ p {
 
 .imgCard{
     height: 350px !important;
-
 }
 .card-img-container {
     width: 100%;
     height: 250px;
     overflow: hidden;
-
+    padding-bottom: 10px;
 }
 .card-img {
     max-width: 100%;
