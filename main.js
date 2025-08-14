@@ -48,7 +48,8 @@ fetch(url)
             return;
         }
 
-document.getElementById("weatherResult").innerHTML = `
+document.getElementById("weatherResult").innerHTML = 
+`
     <h3>${data.location.name}, ${data.location.country}</h3>
     <p><strong>Temperature:</strong> ${data.current.temperature}°C</p>
     <p><strong>Feels like:</strong> ${data.current.feelslike}°C</p>

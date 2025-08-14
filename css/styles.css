@@ -309,8 +309,28 @@ h1#weatherTitle {
     margin-bottom: 20px;
     color: #E9A319;
 }
+#cityInput {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+    
+}
+#getWeatherBtn {
+    background-color: #E9A319;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
 #weather-container {
-    background-color: #000000;
+    background-color: #303030;
     color: #ffffff;
     padding: 20px;
     border-radius: 10px;
@@ -318,18 +338,10 @@ h1#weatherTitle {
     max-width: 400px;
     text-align: center;
 }
-.weather-container {
-    background: #E9A319;
-    padding: 15px;
-    border-radius: 8px;
-    height: 100px;
-    max-width: 300px;
-    margin: 0 auto;
-    text-align: center;
-    align-content: center;
-}
+
 .weather-result {
     margin-top: 15px;
+    background-image: url(assets/patagonia.jpg);
 }
 
 @media screen and (max-width: 800px) {
