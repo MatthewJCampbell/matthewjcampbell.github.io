@@ -15,7 +15,6 @@ html {
     font-style: normal;
 }
 
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
@@ -36,7 +35,7 @@ header.navMenu {
 
 header.hero-banner {
     color: rgb(255, 255, 255);
-    background: url(heroBanner2.jpg);
+    background: url(../assets/heroBanner2.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -110,7 +109,6 @@ button#exploreBtn {
     cursor: pointer;
     border-radius: 5px;
     font-weight: bold;
-    
 }
 button#exploreBtn:hover {
     background-color: #776238;
@@ -218,17 +216,17 @@ section#ourStory {
     margin: 20px 50px;
 }
 section#expeditions {
-    background-image: url(patagonia.jpg);
+    background-image: url(../assets/patagonia.jpg);
     background-color: #ffffff;
     color: #000000;
     text-align: center;
-
 }
 section#media {
     background-color: #000000;
     color: #ffffff;
     text-align: center;
 }
+
 iframe {
     max-width: 100%;
     height: auto;
@@ -255,7 +253,7 @@ section#contact {
     background-color: #ffffff;
     color: #000000;
     text-align: center; 
-    height: 15vh;
+    height: 20vh;
 }
 footer {
     text-align: center;
@@ -304,6 +302,34 @@ footer {
 .backHome:hover {
     background-color: #776238;
     transition: 0.3s ease;
+}
+
+h1#weatherTitle {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #E9A319;
+}
+#weather-container {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 400px;
+    text-align: center;
+}
+.weather-container {
+    background: #E9A319;
+    padding: 15px;
+    border-radius: 8px;
+    height: 100px;
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    align-content: center;
+}
+.weather-result {
+    margin-top: 15px;
 }
 
 @media screen and (max-width: 800px) {

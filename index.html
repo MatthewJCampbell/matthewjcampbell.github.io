@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Explorers Club</title>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="/css/styles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,10 +19,13 @@
         <nav id="menu">
             <ul>
                 <li class="navLink">
-                    <a href="#ourStory">Our Story</a>
+                    <a href="index.html">Home</a>
                 </li>
                 <li class="navLink">
-                    <a href="#expeditions">Expeditions</a>
+                    <a href="/pages/ourStory.html">Our Story</a>
+                </li>
+                <li class="navLink">
+                    <a class="link" href="pages/expeditions.html">Expeditions</a>
                 </li>
                 <li class="navLink">
                     <a href="#media">Media</a>
@@ -41,67 +44,16 @@
         </div>
 
     </header>
-    <main>
-        <section id="ourStory">
-            <h2>Our Story</h2>
-                <p>
-                The Explorers Club is dedicated to the exploration of this incredible planet we call home. We are a global community of adventurers, scientists, and explorers who share a passion for discovery and adventure. Our mission is to promote the exploration of the world and to support those who seek to push the boundaries of human knowledge.
-                <br>
-                <br>
-                Join us as we embark on thrilling expeditions, conduct groundbreaking research, and share our findings with the world. Whether you are an experienced explorer or just starting your journey, The Explorers Club welcomes you to be part of our community.
-                <br>
-                <br>
-                Explore the unknown, discover new horizons, and make a difference in the world with The Explorers Club. Together, we can inspire a new generation of explorers and adventurers to take on the challenges of our time and to push the boundaries of what is possible.
-                </p>
-                
-        </section>
 
-        <section id="expeditions">
-            <h2>Expeditions</h2>
-            <section id="card-section" >
-                <article class="card card-elevation imgCard">
-                    <h3>Patagonia 2025</h3>
-                        <div class="card-img-container">
-                            <img class="card-img" src="patagonia2.jpg" alt="image of a mountain in patagonia">
-                        </div>
-                            <a href="bookings.html" class="card-button">Book Now</a>
-                </article>
+<Section id="weather-container">
+    <h1 id="weatherTitle">Weather Info</h1>
+        <div class="weather-container">
+            <input type="text" id="cityInput" placeholder="Enter city" />
+            <button id="getWeatherBtn">Get Weather</button>
 
-                <article class="card card-elevation imgCard">
-                    <h3>Alaska 2026</h3>
-                        <div class="card-img-container">
-                            <img class="card-img" src="alaska2.jpg" alt="image of a lake in alaska">
-                        </div>
-                            <a href="bookings.html" class="card-button">Book Now</a>
-                </article>
-
-                <article class="card card-elevation imgCard">
-                    <h3>Norway 2027</h3>
-                        <div class="card-img-container">
-                            <img class="card-img" src="norway.jpg" alt="image of a fjord in norway">
-                        </div>
-                            <a href="bookings.html" class="card-button">Book Now</a>
-                </article>
-            </section>
-        </section>
-
-        <section id="media">
-    <h2>Media</h2>
-    <div class="video-container">
-        <iframe 
-            src="https://www.youtube.com/embed/61Xz2Ew71fc?si=Auh6D6kC8j7iUumO"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-        </iframe>
-    </div> 
-</section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-                <p>For inquiries, please email us at hello@theexplorersclub.com</p>
-        </section>
-    </main>
+            <div class="weather-result" id="weatherResult"></div>
+        </div>
+</Section>
 
 <footer>
     <p>&copy; 2025 The Explorers Club. All rights reserved.</p>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expeditions</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navMenu">
+        <h1>The Explorers Club</h1>
+        
+        <button id="toggle">&#9776</button> 
+    
+        <nav id="menu">
+            <ul>
+                <li class="navLink">
+                    <a href="../index.html">Home</a>
+                </li>
+                <li class="navLink">
+                    <a href="ourStory.html">Our Story</a>
+                </li>
+                <li class="navLink">
+                    <a class="link" href="expeditions.html">Expeditions</a>
+                </li>
+                <li class="navLink">
+                    <a href="media.html">Media</a>
+                </li>
+                <li class="navLink">
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+        <section id="expeditions">
+            <h2>Expeditions</h2>
+            <section id="card-section" >
+                <article class="card card-elevation imgCard">
+                    <h3>Patagonia 2025</h3>
+                        <div class="card-img-container">
+                            <img class="card-img" src="../assets/patagonia2.jpg" alt="image of a mountain in patagonia">
+                        </div>
+                            <a href="bookings.html" class="card-button">Book Now</a>
+                </article>
+
+                <article class="card card-elevation imgCard">
+                    <h3>Alaska 2026</h3>
+                        <div class="card-img-container">
+                            <img class="card-img" src="../assets/alaska2.jpg" alt="image of a lake in alaska">
+                        </div>
+                            <a href="bookings.html" class="card-button">Book Now</a>
+                </article>
+
+                <article class="card card-elevation imgCard">
+                    <h3>Norway 2027</h3>
+                        <div class="card-img-container">
+                            <img class="card-img" src="../assets/norway.jpg" alt="image of a fjord in norway">
+                        </div>
+                            <a href="bookings.html" class="card-button">Book Now</a>
+                </article>
+            </section>
+        </section>
+<Section id="weather-container">
+    <h1 id="weatherTitle">Weather Info</h1>
+        <div class="weather-container">
+            <input type="text" id="cityInput" placeholder="Enter city" />
+            <button id="getWeatherBtn">Get Weather</button>
+
+            <div class="weather-result" id="weatherResult"></div>
+        </div>
+</Section>
+<footer>
+    <p>&copy; 2025 The Explorers Club. All rights reserved.</p>
+    <p>Follow us on social media:</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+            </a>
+        </div>
+</footer>
+<script src="../main.js"></script> 
+
+</body>
+</html>
