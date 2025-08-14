@@ -30,39 +30,35 @@ exploreBtn.addEventListener("click", function () {
     window.location.href = "pages/expeditions.html";
 });
 
-const apiKey = "afdd10a1cc59dd64166b1bb1ae5892ee";
 
-        document.getElementById("getWeatherBtn").addEventListener("click", function() {
-            const city = document.getElementById("cityInput").value.trim();
-            if (!city) {
-                alert("Please enter a city name");
-                return;
-            }
+    const apiKey = "d3ea0b58c8d11f6babe918cf9cdf0214"; // Get from https://openweathermap.org/api
 
-            const weatherstackURL = `http://api.weatherstack.com/current?access_key=${apiKey}&query=${city}`;
-            
-            const proxyURL = `https://api.allorigins.win/get?url=${encodeURIComponent(weatherstackURL)}`;
+    document.getElementById("getWeatherBtn").addEventListener("click", () => {
+        const city = document.getElementById("cityInput").value.trim();
+        const resultDiv = document.getElementById("weatherResult");
 
-            fetch(proxyURL)
-                .then(response => response.json())
-                .then(data => {
-                    const parsedData = JSON.parse(data.contents);
+        if (!city) {
+            resultDiv.innerHTML = "<p style='color:red;'>Please enter a city name.</p>";
+            return;
+        }
 
-                    if (parsedData.error) {
-                        document.getElementById("weatherResult").innerHTML = `<p style="color:red;">${parsedData.error.info}</p>`;
-                        return;
-                    }
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${apiKey}&units=metric`;
 
-                    document.getElementById("weatherResult").innerHTML = `
-                        <h3>${parsedData.location.name}, ${parsedData.location.country}</h3>
-                        <p><strong>Temperature:</strong> ${parsedData.current.temperature}°C</p>
-                        <p><strong>Feels like:</strong> ${parsedData.current.feelslike}°C</p>
-                        <p><strong>Weather:</strong> ${parsedData.current.weather_descriptions.join(", ")}</p>
-                        <img src="${parsedData.current.weather_icons[0]}" alt="Weather icon">
-                    `;
-                })
-                .catch(error => {
-                    console.error("Error fetching weather:", error);
-                    document.getElementById("weatherResult").innerHTML = `<p style="color:red;">Unable to fetch weather data.</p>`;
-                });
-        });
+        fetch(url)
+            .then(response => {
+                if (!response.ok) throw new Error("City not found");
+                return response.json();
+            })
+            .then(data => {
+                resultDiv.innerHTML = `
+                    <h3>${data.name}, ${data.sys.country}</h3>
+                    <p>Temperature: ${data.main.temp}°C</p>
+                    <p>Feels like: ${data.main.feels_like}°C</p>
+                    <p>Weather: ${data.weather[0].description}</p>
+                    <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="Weather icon">
+                `;
+            })
+            .catch(error => {
+                resultDiv.innerHTML = `<p style='color:red;'>${error.message}</p>`;
+            });
+    });
